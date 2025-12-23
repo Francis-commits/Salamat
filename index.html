@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>To Every Soul | 2025</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:ital,wght@0,400;1,500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
         :root { --gold: #e0b354; --bg: #03070f; --text: #e2e8f0; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* --- THE BOY (More detailed & emotive) --- */
+        /* --- THE BOY --- */
         .character-fixed { position: fixed; bottom: 40px; right: 40px; z-index: 1000; cursor: pointer; }
         .thought-bubble { 
             position: absolute; bottom: 130px; right: 0; background: rgba(255,255,255,0.95); 
@@ -32,9 +32,9 @@
             font-size: 1.25rem; line-height: 2.2; font-style: italic; color: #cbd5e1;
         }
 
-        /* --- NEW FEATURE: THE "ETHEREAL" CARDS --- */
+        /* --- THE GRID --- */
         .soul-grid { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
             gap: 40px; padding: 60px 10%; 
         }
         .soul-card { 
@@ -46,11 +46,32 @@
 
         .highlight { color: var(--gold); font-weight: 600; }
 
-        /* --- FLOATING SIGNS --- */
         .scroll-reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease-out; }
         .active { opacity: 1; transform: translateY(0); }
 
         footer { text-align: center; padding: 100px; opacity: 0.3; font-size: 0.8rem; letter-spacing: 2px; }
+
+        /* -----------------------------------------------------------
+           PHONE LAYOUT ADJUSTMENTS (Adds mobile compatibility)
+        ----------------------------------------------------------- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem !important; padding: 0 15px; }
+            
+            .character-fixed { bottom: 20px; right: 10px; transform: scale(0.8); } /* Smaller boy on phone */
+            .thought-bubble { right: 10px; width: 160px; font-size: 0.8rem; bottom: 110px; }
+
+            .stars-container { padding: 60px 20px; }
+            .heart-felt-letter { font-size: 1.1rem; line-height: 1.8; }
+            
+            .soul-grid { 
+                grid-template-columns: 1fr; /* Stack cards vertically */
+                padding: 40px 20px; 
+                gap: 20px;
+            }
+            .soul-card { padding: 30px 20px; }
+
+            footer { padding: 60px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -69,7 +90,7 @@
     </div>
 
     <header style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-        <h1 style="font-family: 'Lora'; font-size: clamp(2rem, 8vw, 4.5rem); margin: 0; font-weight: 400;">A Letter to the <span class="highlight">Souls</span> I've Met</h1>
+        <h1 style="font-family: 'Lora'; margin: 0; font-weight: 400;">A Letter to the <span class="highlight">Souls</span> I've Met</h1>
         <p style="letter-spacing: 4px; opacity: 0.6; margin-top: 20px;">2024 — 2025 & BEYOND</p>
     </header>
 
@@ -79,7 +100,7 @@
             <p>I am made of the <span class="highlight">advice</span> you gave me when I was lost, the <span class="highlight">inside jokes</span> we laughed about until we couldn't breathe, and even the <span class="highlight">quiet moments</span> where we didn't say anything at all, but I knew you were there.</p>
             <p>To those who stayed: You are my heart’s permanent residents. To those who left: Thank you for the chapter you wrote in my book. I still read it sometimes. </p>
             <p>You may think you were just a "stranger" or a "classmate," but to me, you were a witness to my life. And for that, <span class="highlight">I love you.</span></p>
-            <div style="font-family: 'Dancing Script'; font-size: 3rem; color: var(--gold); margin-top: 40px;">Merry Christmas & Thank you.</div>
+            <div style="font-family: 'Dancing Script'; font-size: 2.5rem; color: var(--gold); margin-top: 40px;">Merry Christmas & Thank you.</div>
         </div>
     </div>
 
@@ -108,7 +129,6 @@
     </footer>
 
     <script>
-        // Scroll Reveal Logic
         window.addEventListener('scroll', () => {
             const reveals = document.querySelectorAll('.scroll-reveal');
             reveals.forEach(el => {
@@ -120,7 +140,6 @@
             });
         });
 
-        // Touching Messages for the Boy
         const speech = document.getElementById('speech');
         const feelings = [
             "You belong here.",
