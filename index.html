@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Every Soul | 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:ital,wght@0,400;1,500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #e0b354; --bg: #03070f; --text: #e2e8f0; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* --- THE BOY (More detailed & emotive) --- */
+        .character-fixed { position: fixed; bottom: 40px; right: 40px; z-index: 1000; cursor: pointer; }
+        .thought-bubble { 
+            position: absolute; bottom: 130px; right: 0; background: rgba(255,255,255,0.95); 
+            color: #1a1a1a; padding: 15px 20px; border-radius: 25px; font-size: 0.9rem;
+            width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); opacity: 0; transform: translateY(20px);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); pointer-events: none;
+            font-weight: 500; border-bottom: 4px solid var(--gold);
+        }
+
+        /* --- STARRY NIGHT SECTION --- */
+        .stars-container { 
+            padding: 120px 20px; background: linear-gradient(to bottom, #03070f, #0a1324, #03070f);
+            text-align: center; position: relative;
+        }
+
+        .heart-felt-letter { 
+            max-width: 750px; margin: 0 auto; font-family: 'Lora', serif; 
+            font-size: 1.25rem; line-height: 2.2; font-style: italic; color: #cbd5e1;
+        }
+
+        /* --- NEW FEATURE: THE "ETHEREAL" CARDS --- */
+        .soul-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 40px; padding: 60px 10%; 
+        }
+        .soul-card { 
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(224, 179, 84, 0.1);
+            padding: 40px; border-radius: 2px; position: relative; transition: 0.6s;
+        }
+        .soul-card:hover { background: rgba(224, 179, 84, 0.05); border-color: var(--gold); }
+        .soul-card::before { content: '“'; position: absolute; top: 10px; left: 20px; font-size: 5rem; color: var(--gold); opacity: 0.2; }
+
+        .highlight { color: var(--gold); font-weight: 600; }
+
+        /* --- FLOATING SIGNS --- */
+        .scroll-reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease-out; }
+        .active { opacity: 1; transform: translateY(0); }
+
+        footer { text-align: center; padding: 100px; opacity: 0.3; font-size: 0.8rem; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <div class="character-fixed" id="boy-trigger">
+        <div class="thought-bubble" id="speech">I'm so glad you're here.</div>
+        <svg width="120" height="140" viewBox="0 0 100 120" class="float">
+            <path d="M 20 35 Q 50 -10 85 35" fill="#b91c1c" />
+            <rect x="18" y="32" width="68" height="12" rx="6" fill="white" />
+            <circle cx="85" cy="30" r="8" fill="white" />
+            <circle cx="52" cy="70" r="35" fill="#fbd38d" />
+            <circle cx="42" cy="65" r="3.5" fill="#2d3748" />
+            <circle cx="62" cy="65" r="3.5" fill="#2d3748" />
+            <path d="M 42 85 Q 52 95 62 85" stroke="#2d3748" fill="none" stroke-width="2.5" />
+        </svg>
+    </div>
+
+    <header style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <h1 style="font-family: 'Lora'; font-size: clamp(2rem, 8vw, 4.5rem); margin: 0; font-weight: 400;">A Letter to the <span class="highlight">Souls</span> I've Met</h1>
+        <p style="letter-spacing: 4px; opacity: 0.6; margin-top: 20px;">2024 — 2025 & BEYOND</p>
+    </header>
+
+    <div class="stars-container">
+        <div class="heart-felt-letter scroll-reveal">
+            <p>I was thinking tonight about how many people it takes to build a single person. </p>
+            <p>I am made of the <span class="highlight">advice</span> you gave me when I was lost, the <span class="highlight">inside jokes</span> we laughed about until we couldn't breathe, and even the <span class="highlight">quiet moments</span> where we didn't say anything at all, but I knew you were there.</p>
+            <p>To those who stayed: You are my heart’s permanent residents. To those who left: Thank you for the chapter you wrote in my book. I still read it sometimes. </p>
+            <p>You may think you were just a "stranger" or a "classmate," but to me, you were a witness to my life. And for that, <span class="highlight">I love you.</span></p>
+            <div style="font-family: 'Dancing Script'; font-size: 3rem; color: var(--gold); margin-top: 40px;">Merry Christmas & Thank you.</div>
+        </div>
+    </div>
+
+    <div class="soul-grid">
+        <div class="soul-card scroll-reveal">
+            <h3 class="highlight">The Quiet Supporters</h3>
+            <p>To the people who liked my posts, checked in when I went silent, or just sent a "thinking of you" text. You have no idea how many times you saved a bad day without even knowing it.</p>
+        </div>
+        <div class="soul-card scroll-reveal">
+            <h3 class="highlight">The Brief Encounters</h3>
+            <p>To the person in the grocery line, the waiter who was extra kind, the stranger who complimented my shirt—you were only in my life for 60 seconds, but you reminded me that the world is a gentle place.</p>
+        </div>
+        <div class="soul-card scroll-reveal">
+            <h3 class="highlight">The Lessons</h3>
+            <p>To the people I no longer talk to: I don't hold any bitterness. You taught me how to set boundaries, how to love better, or simply how to let go. You are still a part of my growth.</p>
+        </div>
+        <div class="soul-card scroll-reveal">
+            <h3 class="highlight">The Life-Longs</h3>
+            <p>To those who have seen me change three different versions of myself and still stayed. You are my family, whether by blood or by choice. Thank you for the years of patience.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>I AM WHO I AM BECAUSE OF YOU.</p>
+        <p>DECEMBER 2025</p>
+    </footer>
+
+    <script>
+        // Scroll Reveal Logic
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            reveals.forEach(el => {
+                let windowHeight = window.innerHeight;
+                let revealTop = el.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        });
+
+        // Touching Messages for the Boy
+        const speech = document.getElementById('speech');
+        const feelings = [
+            "You belong here.",
+            "I'm glad we exist at the same time.",
+            "Thank you for being you.",
+            "Every meeting is a miracle.",
+            "You are someone's favorite memory.",
+            "May your 2026 be beautiful."
+        ];
+
+        function talk() {
+            speech.style.opacity = 1;
+            speech.style.transform = "translateY(0)";
+            speech.innerText = feelings[Math.floor(Math.random() * feelings.length)];
+            setTimeout(() => {
+                speech.style.opacity = 0;
+                speech.style.transform = "translateY(20px)";
+            }, 4500);
+        }
+
+        setInterval(talk, 8000);
+        setTimeout(talk, 1500);
+    </script>
+</body>
+</html>
